@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="buttonText"
+      [icon]="buttonIcon" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>lista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p class="card-text">{{ prueba }}</p>
+
+<ion-item>
+  <ion-label position="floating">Nuevo item</ion-label>
+  <ion-input [(ngModel)]="inputValue" (keyup.enter)="handleLogin()"></ion-input>
+</ion-item>
+
+<ion-item *ngFor="let player of allPlayers">
+  <ion-label>{{ player }}</ion-label>
+  <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
+</ion-item>
+
+</ion-content>
